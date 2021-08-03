@@ -1,0 +1,17 @@
+
+name: sample
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  DEVELOPER_DIR: "/Applications/${{ secret.XCODE_VERSION }}.app/Contents/Developer"
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: show xcode version
+        run: xcodebuild -version
