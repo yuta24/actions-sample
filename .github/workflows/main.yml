@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  DEVELOPER_DIR: "/Applications/${{ secret.XCODE_VERSION }}.app/Contents/Developer"
+  DEVELOPER_DIR: "/Applications/${{ secrets.XCODE_VERSION }}.app/Contents/Developer"
 
 jobs:
   test:
